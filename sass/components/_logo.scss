@@ -1,0 +1,31 @@
+.logo {
+  color: var(--accent-color);
+  font-family: Raleway, sans-serif;
+  @include font(24px, 700, 1.17, 0.03em);
+
+  &--color-black {
+    color: #000000;
+  }
+
+  &--color-white {
+    color: var(--white-text-color);
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include font(26px, 700, 1.19, 0.03em);
+  }
+}
+
+.header__logo {
+  @media screen and (min-width: $tablet) {
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+  }
+}
+
+.footer__logo {
+  margin-bottom: 20px;
+}

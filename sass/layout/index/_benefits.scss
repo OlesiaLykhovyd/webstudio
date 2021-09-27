@@ -1,0 +1,52 @@
+/* Section Benefits */
+.benefits-list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+.benefits-list__item {
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 4 * 30px) / 4);
+  }
+}
+
+.benefits-list__icon {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bcg-color-pink);
+  padding: 25px 0;
+  margin-bottom: 30px;
+}
+
+.benefits-list__title {
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+  text-transform: uppercase;
+
+  @media screen and (min-width: $mobile) {
+    @include font(14px, 700, 1.17, 0.03em);
+  }
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.14;
+    font-size: inherit;
+  }
+}
